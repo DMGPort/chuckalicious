@@ -1,1 +1,10 @@
-<app-draw-card></app-draw-card>
+<md-sidenav-container class="main-container">
+    <md-sidenav mode="over" #sidenav>
+        menu-content here
+    </md-sidenav>
+    <div class="app-content">
+        <app-top-status-display class="center"></app-top-status-display>
+        <button md-raised-button (click)="sidenav.open()">Menu</button>
+        <app-draw-card></app-draw-card>
+    </div>
+</md-sidenav-container>
