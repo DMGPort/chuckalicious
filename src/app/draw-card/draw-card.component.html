@@ -1,19 +1,25 @@
 <div class="col-sm-8 col-sm-offset-2">
   <div class="col-sm-6">
-    <div>
-      <span class="playingCard {{ drawCardService.pCard }}"></span>
-    
+    <div class="center">
+      <md-card class="no-style">
+        <md-card-subtitle> Player Name Here </md-card-subtitle>    
+        <img md-card-avatar src='http://www.toyhalloffame.org/sites/www.toyhalloffame.org/files/toys/square/rubber-duck_0.jpg'>    
+        <span class="playingCard {{ drawCardService.pCard }}"></span>
+      </md-card>
     </div>
   </div>
   <div class="col-sm-6">
-    <div>
-  <span class="playingCard {{ drawCardService.cCard }}"></span>
-    
-  </div>
+    <div class="center">
+      <md-card class="no-style">
+        <md-card-subtitle> Chuck Norris </md-card-subtitle>    
+        <img md-card-avatar src='https://firebasestorage.googleapis.com/v0/b/chuck-games.appspot.com/o/Chuck-Norris.jpg?alt=media&token=1ac5db4f-212e-45e7-9162-a740e142afe4'>    
+        <span class="playingCard {{ drawCardService.cCard }}"></span>
+      </md-card>
+    </div>
   </div>
   <div class="col-sm-12">
   <md-card>
-    <div id="actions">
+    <div class="center">
       <button md-raised-button (click)="playerStarts()">Player First</button>
       <button md-raised-button (click)="chuckStarts()">Chuck First</button>
     </div>
