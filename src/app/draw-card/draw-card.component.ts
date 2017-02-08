@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DrawCardService } from '../draw-card.service';
 
 @Component({
   selector: 'app-draw-card',
@@ -7,11 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DrawCardComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private drawCardService: DrawCardService
+  ) { }
 
   ngOnInit() {
   }
 
-  pCard:string = "back";
-  cCard:string = "back";
+  playerStarts(){
+    this.drawCardService.playerDraws();
+  }
+  chuckStarts(){
+    this.drawCardService.chuckDraws();
+  }
+  
 }
