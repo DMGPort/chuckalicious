@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { DrawCardService } from '../draw-card.service';
+import { DrawCardService } from './draw-card.service';
 
 @Component({
   selector: 'app-draw-card',
   templateUrl: './draw-card.component.html',
-  styleUrls: ['./draw-card.component.css']
+  styleUrls: ['./draw-card.component.css'],
+  providers: [ DrawCardService ]
 })
 export class DrawCardComponent implements OnInit {
 

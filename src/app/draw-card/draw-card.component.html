@@ -18,10 +18,13 @@
     </div>
   </div>
   <div class="col-sm-12">
-  <md-card>
-    <div class="center">
+  <md-card class="no-style">
+    <div class="center" *ngIf="drawCardService.inPlay == false">
       <button md-raised-button (click)="playerStarts()">Player First</button>
       <button md-raised-button (click)="chuckStarts()">Chuck First</button>
+    </div>
+    <div class="center" *ngIf="drawCardService.inPlay == true">
+      <button md-raised-button>In play...</button>
     </div>
   </md-card>
   </div>

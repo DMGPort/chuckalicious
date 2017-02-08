@@ -11,7 +11,8 @@
 }
 .back {
   background: url('https://firebasestorage.googleapis.com/v0/b/chuck-games.appspot.com/o/back_of_card.png?alt=media&token=e8a34a1b-6357-4192-8e3d-6cb58a022d96') no-repeat;
-  background-position-x: -1px;
+  width: 83px;
+  height: 115px;
 }
 .card {
   background: url('https://firebasestorage.googleapis.com/v0/b/chuck-games.appspot.com/o/full_deck.png?alt=media&token=7915ea1f-1769-4f44-8dce-fed9757718b2') no-repeat;
