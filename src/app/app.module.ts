@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import 'hammerjs';
 //Services
-import { DrawCardService } from './draw-card.service';
 
 import { AppComponent } from './app.component';
 import { DrawCardComponent } from './draw-card/draw-card.component';
@@ -23,7 +22,7 @@ import { TopStatusDisplayComponent } from './top-status-display/top-status-displ
     HttpModule,
     MaterialModule.forRoot()
   ],
-  providers: [ DrawCardService ],
+  providers: [  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
