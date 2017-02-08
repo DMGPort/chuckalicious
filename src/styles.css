@@ -3,3 +3,6 @@
 .no-style { /* md-card */
     box-shadow: none;
 }
+.center{
+    text-align: center;
+}

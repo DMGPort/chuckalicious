@@ -9,11 +9,13 @@ import { DrawCardService } from './draw-card.service';
 
 import { AppComponent } from './app.component';
 import { DrawCardComponent } from './draw-card/draw-card.component';
+import { TopStatusDisplayComponent } from './top-status-display/top-status-display.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DrawCardComponent
+    DrawCardComponent,
+    TopStatusDisplayComponent
   ],
   imports: [
     BrowserModule,
