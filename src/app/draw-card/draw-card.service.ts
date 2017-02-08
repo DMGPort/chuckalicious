@@ -5,7 +5,7 @@ export class DrawCardService {
 
   constructor() { }
 
-  gameStopped = true;
+  inPlay = false;
   joke: string = "";
   chuckFlip:string = "back";
   cSuit:string = "";
@@ -22,6 +22,7 @@ export class DrawCardService {
   pRankNumber:number;
 
   playerDraws(){
+    this.inPlay = true;
     this.cCard = "back";
     this.pCard = "back";
       setTimeout(() => {
@@ -43,10 +44,12 @@ export class DrawCardService {
           this.cRank = this.checkRank(this.cRankNumber);
           this.chuckFlip = "card";      
           this.cCard = this.chuckFlip + this.cSuit + this.cRank;    
+          this.inPlay = false;
         }, 300)
       },400)
   }
   chuckDraws(){
+    this.inPlay = true;    
     this.cCard = "back";
     this.pCard = "back";
       setTimeout(() => {
@@ -68,7 +71,7 @@ export class DrawCardService {
           this.pRank = this.checkRank(this.pRankNumber);
           this.playerFlip = "card";      
           this.pCard = this.playerFlip + this.pSuit + this.pRank;    
-          this.gameStopped = true;
+          this.inPlay = false;
         }, 300)
       },400)
   }
