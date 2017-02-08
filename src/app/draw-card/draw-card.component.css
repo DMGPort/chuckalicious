@@ -1,0 +1,16 @@
+.playingCard {
+  display: block;
+  position: relative;
+  border: 1px solid #000;
+  border-radius: .3em;
+  text-align: center;
+  margin-top: 20px;
+  height: 115px;
+  width: 83px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.back {
+  background: url('https://firebasestorage.googleapis.com/v0/b/chuck-games.appspot.com/o/back_of_card.png?alt=media&token=e8a34a1b-6357-4192-8e3d-6cb58a022d96') no-repeat;
+  background-position-x: -1px;
+}
