@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+//Services
+import { DrawCardService } from './draw-card.service';
 
 import { AppComponent } from './app.component';
 import { DrawCardComponent } from './draw-card/draw-card.component';
@@ -16,7 +18,7 @@ import { DrawCardComponent } from './draw-card/draw-card.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ DrawCardService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

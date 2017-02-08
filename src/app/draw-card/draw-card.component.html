@@ -1,5 +1,22 @@
-<p>
-  draw-card works!
-</p>
-<span class="playingCard {{ pCard }}"></span>
-<span class="playingCard {{ cCard }}"></span>
+<div class="col-sm-8 col-sm-offset-2">
+  <div class="col-sm-6">
+    <div>
+      <span class="playingCard {{ drawCardService.pCard }}"></span>
+    
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div>
+  <span class="playingCard {{ drawCardService.cCard }}"></span>
+    
+  </div>
+  </div>
+  <div class="col-sm-12">
+  <div>
+    <div id="actions">
+      <button md-raised-button (click)="playerStarts()">Player First</button>
+      <button md-raised-button (click)="chuckStarts()">Chuck First</button>
+    </div>
+  </div>
+  </div>
+</div>
