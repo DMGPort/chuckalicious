@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { MaterialModule } from '@angular/material';
+import 'hammerjs';
 //Services
 import { DrawCardService } from './draw-card.service';
 
@@ -16,7 +18,8 @@ import { DrawCardComponent } from './draw-card/draw-card.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    MaterialModule.forRoot()
   ],
   providers: [ DrawCardService ],
   bootstrap: [ AppComponent ]
