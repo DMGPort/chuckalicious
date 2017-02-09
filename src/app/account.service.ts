@@ -35,24 +35,28 @@ export class AccountService {
     return authState;
   }
   preLogin(){
+    let newDate = new Date().toDateString();
       this.login().then((authState) => {
         if (authState && authState.uid) {
-          this.uid = authState.uid;
           this.item = this.af.database.object('/users/'+  authState.uid, { preserveSnapshot: true });
           this.item.subscribe(snapshot => {
-              if(snapshot.val() == null){
+            console.log(snapshot.val())
+            if(snapshot.val() == null){
               this.af.database.object('/users/'+ authState.uid).set({
                     name: this.displayName,
-                    message: "",
-                    losses: 0,
+                    message: "default",
+                    reg: newDate,
+                    losses: 0
                 });
               }
             if(snapshot.val() != null){
-              let count = snapshot.val().losses;
               let mes = (snapshot.val().message);
+              let regdate = (snapshot.val().reg);
+              let count = snapshot.val().losses;
               this.af.database.object('/users/'+ authState.uid).set({
                     name: this.displayName,
                     message: mes,
+                    reg: regdate,
                     losses: count
                })
               }
@@ -66,7 +70,6 @@ export class AccountService {
         }
       })
   }
-  uid: string;
   login(): firebase.Promise<FirebaseAuthState> {
     const idToken = localStorage.getItem('idToken');
     const accessToken = localStorage.getItem('accessToken');
