@@ -12,6 +12,7 @@ import { DrawCardComponent } from './draw-card/draw-card.component';
 import { TopStatusDisplayComponent } from './top-status-display/top-status-display.component';
 import { HomeComponent } from './home/home.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
+import { GameGridComponent } from './game-grid/game-grid.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SideNavComponent } from './side-nav/side-nav.component';
     DrawCardComponent,
     TopStatusDisplayComponent,
     HomeComponent,
-    SideNavComponent
+    SideNavComponent,
+    GameGridComponent
   ],
   imports: [
     BrowserModule,

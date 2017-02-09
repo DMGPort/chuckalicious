@@ -3,8 +3,8 @@
         <app-side-nav></app-side-nav>
     </md-sidenav>
     <app-top-status-display class="center"></app-top-status-display>
-    <button id="menu-button" md-raised-button (click)="sidenav.open()">Menu</button>
     <div class="app-content">
+        <button id="menu-button" md-raised-button (click)="sidenav.open()">Menu</button>
         <router-outlet></router-outlet>
     </div>
 </md-sidenav-container>
