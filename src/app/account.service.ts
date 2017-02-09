@@ -21,7 +21,8 @@ export class AccountService {
   public photoUrl: string = '';
   private errorDuringLogin = false;
 
-  item: any;
+  item;
+  itemSubscription;
   private storeAuthInfo(authState: FirebaseAuthState): FirebaseAuthState {
     if (authState) {
       this.displayName = authState.auth.displayName;
@@ -39,8 +40,7 @@ export class AccountService {
       this.login().then((authState) => {
         if (authState && authState.uid) {
           this.item = this.af.database.object('/users/'+  authState.uid, { preserveSnapshot: true });
-          this.item.subscribe(snapshot => {
-            console.log(snapshot.val())
+          this.itemSubscription = this.item.subscribe(snapshot => {
             if(snapshot.val() == null){
               this.af.database.object('/users/'+ authState.uid).set({
                     name: this.displayName,
@@ -98,7 +98,7 @@ export class AccountService {
   }
 
   logout() {
-    this.item == null;
+    this.itemSubscription.unsubscribe();
     this.isAuthenticated = false;
     this.isAdmin = false;
     this.displayName = this.photoUrl = '';
