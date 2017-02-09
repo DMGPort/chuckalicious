@@ -13,6 +13,7 @@ import { TopStatusDisplayComponent } from './top-status-display/top-status-displ
 import { HomeComponent } from './home/home.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { GameGridComponent } from './game-grid/game-grid.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { GameGridComponent } from './game-grid/game-grid.component';
     TopStatusDisplayComponent,
     HomeComponent,
     SideNavComponent,
-    GameGridComponent
+    GameGridComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
