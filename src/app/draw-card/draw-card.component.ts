@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DrawCardService } from './draw-card.service';
+import { AccountService } from '../account.service';
 
 @Component({
   selector: 'app-draw-card',
@@ -10,7 +11,8 @@ import { DrawCardService } from './draw-card.service';
 export class DrawCardComponent implements OnInit {
 
   constructor(
-    private drawCardService: DrawCardService
+    private drawCardService: DrawCardService,
+    private accountService: AccountService
   ) { }
 
   ngOnInit() {
