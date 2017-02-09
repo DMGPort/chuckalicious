@@ -18,5 +18,8 @@ export class LoginComponent implements OnInit {
   loginGoogle(){
     this.accountService.preLogin();
   }
+  loginFacebook(){
+    this.accountService.facebook();
+  }
 
 }

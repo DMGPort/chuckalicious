@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { MdDialog } from '@angular/material';
+import { DynoDialogComponent } from './dyno-dialog/dyno-dialog.component';
 import { AngularFire, AuthProviders, AuthMethods, FirebaseAuthState } from 'angularfire2';
 import * as firebase from 'firebase';
 import 'rxjs/add/operator/toPromise';
@@ -56,8 +57,10 @@ export class AccountService {
                 });
               }
            });
+          this.dialog.closeAll();
           let message: string = "Login successful for " + authState.auth.displayName;
-          this.router.navigate(['/draw']);
+          localStorage.setItem('dialog_message', message);
+          this.dialog.open(DynoDialogComponent);
         } else {
           this.errorDuringLogin = true;
         }
@@ -99,7 +102,14 @@ export class AccountService {
     this.af.auth.logout();
     localStorage.setItem('idToken', '');
     localStorage.setItem('accessToken', '');
+    localStorage.setItem('dialog_message', "Logged Out");
+    this.dialog.open(DynoDialogComponent);
     this.router.navigate(['/home']);
+  }
+
+  facebook(){
+    localStorage.setItem('dialog_message', "Sorry Not Configured Yet");
+    this.dialog.open(DynoDialogComponent);
   }
 
 

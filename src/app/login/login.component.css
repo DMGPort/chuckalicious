@@ -15,7 +15,6 @@
     overflow: hidden;
     align-self: flex-start;
     transition: margin 1300ms;
-    max-height: 240px;
     max-width: 220px;
 }
 .child:hover{
