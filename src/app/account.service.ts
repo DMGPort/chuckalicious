@@ -40,6 +40,13 @@ export class AccountService {
           this.uid = authState.uid;
           this.item = this.af.database.object('/users/'+  authState.uid, { preserveSnapshot: true });
           this.item.subscribe(snapshot => {
+              if(snapshot.val() == null){
+              this.af.database.object('/users/'+ authState.uid).set({
+                    name: this.displayName,
+                    message: "",
+                    losses: 0,
+                });
+              }
             if(snapshot.val() != null){
               let count = snapshot.val().losses;
               let mes = (snapshot.val().message);
@@ -48,13 +55,6 @@ export class AccountService {
                     message: mes,
                     losses: count
                })
-              }
-              if(snapshot.val() == null){
-              this.af.database.object('/users/'+ authState.uid).set({
-                    name: this.displayName,
-                    message: "",
-                    losses: 0,
-                });
               }
            });
           this.dialog.closeAll();
