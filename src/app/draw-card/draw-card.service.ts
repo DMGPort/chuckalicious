@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
+import { AccountService } from '../account.service';
 
 @Injectable()
 export class DrawCardService {
 
-  constructor() { }
+  constructor(
+    private accountService: AccountService
+  ) { }
 
   inPlay = false;
   joke: string = "";

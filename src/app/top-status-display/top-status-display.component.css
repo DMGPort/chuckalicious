@@ -4,7 +4,7 @@
     padding: 5px;
     margin-bottom: 0px;
 }
-.glyphicon:hover{
+#user:hover{
     cursor: pointer;
 }
 #user{

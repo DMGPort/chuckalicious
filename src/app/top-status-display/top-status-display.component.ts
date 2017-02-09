@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountService } from '../account.service';
+import { DialogService } from '../dialog.service';
 
 @Component({
   selector: 'app-top-status-display',
@@ -9,13 +10,18 @@ import { AccountService } from '../account.service';
 export class TopStatusDisplayComponent implements OnInit {
 
   constructor(
-    private accountService: AccountService
+    private accountService: AccountService,
+    private dialogService: DialogService
   ) { }
 
   ngOnInit() {
   }
   
   openLogin(){
-    this.accountService.openLoginDialog();
+    this.dialogService.openLoginDialog();
+  }
+
+  logout(){
+    this.accountService.logout();
   }
 }

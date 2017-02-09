@@ -1,4 +1,9 @@
 <div class="top">
   Show win/loose stats here
-  <span id="user">UserName<span class="glyphicon glyphicon-user" (click)="openLogin()" mdTooltip="Login!"></span></span>
+  <span *ngIf="!accountService.isAuthenticated" id="user" (click)="openLogin()">LogIn <span class="glyphicon glyphicon-user" mdTooltip="Login!"></span></span>
+  <span *ngIf="accountService.isAuthenticated" id="user">{{ accountService.displayName }} <span class="glyphicon glyphicon-user" mdTooltip="LogOut!" [mdMenuTriggerFor]="logut"></span></span>
+  <md-menu #logut="mdMenu">
+    <button md-menu-item (click)="logout()">LogOut</button>
+  </md-menu>
+
 </div>

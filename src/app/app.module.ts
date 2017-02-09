@@ -4,9 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import 'hammerjs';
+//Firebase
+import { AngularFireModule } from 'angularfire2';
+import { FirebaseConfig, FirebaseAuthConfig } from './firebase-config';
 //Services
 import { AppRoutingModule, appRoutingProviders } from './app-routing.module';
 import { AccountService } from './account.service';
+import { DialogService } from './dialog.service';
 
 import { AppComponent } from './app.component';
 import { DrawCardComponent } from './draw-card/draw-card.component';
@@ -31,9 +35,10 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     HttpModule,
     MaterialModule.forRoot(),
+    AngularFireModule.initializeApp(FirebaseConfig, FirebaseAuthConfig),
     AppRoutingModule
   ],
-  providers: [ appRoutingProviders, AccountService ],
+  providers: [ appRoutingProviders, AccountService, DialogService ],
   bootstrap: [ AppComponent ],
   entryComponents: [
     LoginComponent
