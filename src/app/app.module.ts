@@ -34,6 +34,9 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule
   ],
   providers: [ appRoutingProviders, AccountService ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ AppComponent ],
+  entryComponents: [
+    LoginComponent
+  ]
 })
 export class AppModule { }
