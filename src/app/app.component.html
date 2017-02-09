@@ -1,10 +1,10 @@
 <md-sidenav-container class="main-container">
     <md-sidenav mode="over" #sidenav>
-        menu-content here
+        <app-side-nav></app-side-nav>
     </md-sidenav>
     <app-top-status-display class="center"></app-top-status-display>
     <button id="menu-button" md-raised-button (click)="sidenav.open()">Menu</button>
     <div class="app-content">
-        <app-draw-card></app-draw-card>
+        <router-outlet></router-outlet>
     </div>
 </md-sidenav-container>
