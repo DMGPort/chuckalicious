@@ -6,6 +6,7 @@ import { MaterialModule } from '@angular/material';
 import 'hammerjs';
 //Services
 import { AppRoutingModule, appRoutingProviders } from './app-routing.module';
+import { AccountService } from './account.service';
 
 import { AppComponent } from './app.component';
 import { DrawCardComponent } from './draw-card/draw-card.component';
@@ -32,7 +33,7 @@ import { LoginComponent } from './login/login.component';
     MaterialModule.forRoot(),
     AppRoutingModule
   ],
-  providers: [ appRoutingProviders ],
+  providers: [ appRoutingProviders, AccountService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
