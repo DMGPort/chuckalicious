@@ -21,7 +21,6 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import { GameGridComponent } from './game-grid/game-grid.component';
 import { DrawCardComponent } from './draw-card/draw-card.component';
 import { RollDiceComponent } from './roll-dice/roll-dice.component';
-import { PlayTableComponent } from './play-table/play-table.component';x
 
 @NgModule({
   declarations: [
