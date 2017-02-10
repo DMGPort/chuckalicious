@@ -1,4 +1,3 @@
-
 .cube {
   display: block;
   position: relative;
@@ -11,7 +10,6 @@
   margin-left: auto;
   margin-right: auto;
 }
-
 .dice {
   background: url('https://firebasestorage.googleapis.com/v0/b/chuck-games.appspot.com/o/Untitled.png?alt=media&token=ff3c7f87-9028-4a8d-9e10-55915def1db7') no-repeat;
   background-position-y: -5px;  

@@ -13,6 +13,7 @@ import { AccountService } from './account.service';
 import { DialogService } from './dialog.service';
 
 import { LoginComponent } from './login/login.component';
+import { LoginRequestComponent } from './login-request/login-request.component';
 import { DynoDialogComponent } from './dyno-dialog/dyno-dialog.component';
 import { AppComponent } from './app.component';
 import { TopStatusDisplayComponent } from './top-status-display/top-status-display.component';
@@ -29,6 +30,7 @@ import { RollDiceComponent } from './roll-dice/roll-dice.component';
     HomeComponent,
     SideNavComponent,
     LoginComponent,
+    LoginRequestComponent,
     DynoDialogComponent,
     GameGridComponent,
     DrawCardComponent,
@@ -46,7 +48,8 @@ import { RollDiceComponent } from './roll-dice/roll-dice.component';
   bootstrap: [ AppComponent ],
   entryComponents: [
     LoginComponent,
-    DynoDialogComponent
+    DynoDialogComponent,
+    LoginRequestComponent
   ]
 })
 export class AppModule { }

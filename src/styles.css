@@ -16,3 +16,6 @@ html, body, app-root, md-sidenav-container{
   width: 100%;
   height: 90%;
 }
+.avatar{
+    margin: 20px;
+}

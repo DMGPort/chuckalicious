@@ -19,8 +19,7 @@ export class LoggedInGuard implements CanActivate {
         }
         else {
             this.router.navigate(['/home']);
-            localStorage.setItem('dialog_message', "Please Log In");
-            this.dialogService.openDynoDialog();
+            this.dialogService.openLoginPrompt();
         }
         return authenticated;
     }
