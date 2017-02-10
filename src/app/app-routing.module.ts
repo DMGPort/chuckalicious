@@ -5,11 +5,13 @@ import { LoggedInGuard } from './login.guard';
 
 import { HomeComponent } from './home/home.component';
 import { DrawCardComponent } from './draw-card/draw-card.component';
+import { RollDiceComponent } from './roll-dice/roll-dice.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
-    { path: 'draw', component: DrawCardComponent, canActivate: [ LoggedInGuard ]  }
+    { path: 'draw', component: DrawCardComponent, canActivate: [ LoggedInGuard ]  },
+    { path: 'dice', component: RollDiceComponent, canActivate: [ LoggedInGuard ]  }
 ];
 
 export const appRoutingProviders: any[] = [

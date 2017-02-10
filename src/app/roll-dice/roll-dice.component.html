@@ -1,8 +1,10 @@
+
+
 <div id="main" class="col-sm-8 col-sm-offset-2">
   <div class="col-sm-6">
     <div *ngIf="accountService.isAuthenticated" class="center">
       <md-card class="no-style">
-        <span class="playingCard {{ drawCardService.pCard }}"></span>
+        <span class="cube dice {{ rollDiceService.pDice}}"></span>
         <img md-card-avatar [src]='accountService.photoUrl'>    
         <md-card-subtitle> {{ accountService.displayName }} </md-card-subtitle>    
       </md-card>
@@ -11,7 +13,7 @@
   <div class="col-sm-6">
     <div class="center">
       <md-card class="no-style">
-        <span class="playingCard {{ drawCardService.cCard }}"></span>
+        <span class="cube dice {{ rollDiceService.cDice}}"></span>
         <img md-card-avatar src='https://firebasestorage.googleapis.com/v0/b/chuck-games.appspot.com/o/Chuck-Norris.jpg?alt=media&token=1ac5db4f-212e-45e7-9162-a740e142afe4'>    
         <md-card-subtitle> Chuck Norris </md-card-subtitle>    
       </md-card>
@@ -19,11 +21,10 @@
   </div>
   <div class="col-sm-12">
   <md-card class="no-style">
-    <div class="center" *ngIf="drawCardService.inPlay == false">
-      <button md-raised-button (click)="playerStarts()">Player First</button>
-      <button md-raised-button (click)="chuckStarts()">Chuck First</button>
+    <div class="center" *ngIf="rollDiceService.inPlay == false">
+      <button md-raised-button (click)="rollDice()">Roll</button>
     </div>
-    <div class="center" *ngIf="drawCardService.inPlay == true">
+    <div class="center" *ngIf="rollDiceService.inPlay == true">
       <button md-raised-button>In play...</button>
     </div>
   </md-card>

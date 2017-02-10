@@ -15,22 +15,24 @@ import { DialogService } from './dialog.service';
 import { LoginComponent } from './login/login.component';
 import { DynoDialogComponent } from './dyno-dialog/dyno-dialog.component';
 import { AppComponent } from './app.component';
-import { DrawCardComponent } from './draw-card/draw-card.component';
 import { TopStatusDisplayComponent } from './top-status-display/top-status-display.component';
 import { HomeComponent } from './home/home.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { GameGridComponent } from './game-grid/game-grid.component';
+import { DrawCardComponent } from './draw-card/draw-card.component';
+import { RollDiceComponent } from './roll-dice/roll-dice.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DrawCardComponent,
     TopStatusDisplayComponent,
     HomeComponent,
     SideNavComponent,
-    GameGridComponent,
     LoginComponent,
-    DynoDialogComponent
+    DynoDialogComponent,
+    GameGridComponent,
+    DrawCardComponent,
+    RollDiceComponent
   ],
   imports: [
     BrowserModule,
