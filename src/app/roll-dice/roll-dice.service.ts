@@ -9,15 +9,20 @@ export class RollDiceService {
   pNumber: number;
   cDice: string;
   cNumber: number;
+  inPlay: boolean = false;
 
   rollDice(){
-    this.scrambleDice(6)
+    this.inPlay = true;
+    this.scrambleDice(18)
   }
 
   roll(){   
-    this.pNumber = this.getRandomNumber(1,5);
+    this.pNumber = this.getRandomNumber(1,6);
     this.cNumber = this.getRandomNumber(2,6);
     if(this.pNumber >= this.cNumber){
+      if(this.pNumber == 6){
+        this.cNumber = 7;        
+      }
       while(this.pNumber >= this.cNumber){
         this.cNumber = this.getRandomNumber(2,6);
       }
@@ -33,10 +38,11 @@ export class RollDiceService {
       if (int > 0) {  
         setTimeout(() =>{
            this.scrambleDice(int);
-        }  , 150) 
+        }  , 90) 
       }
       if (int == 0) {  
           this.roll();
+          this.inPlay = false;
       }
   }
 
@@ -62,6 +68,9 @@ export class RollDiceService {
       }
       if(number == 6){
         return " six";
+      }
+      if(number == 7){
+        return " seven";
       }
   }
 }

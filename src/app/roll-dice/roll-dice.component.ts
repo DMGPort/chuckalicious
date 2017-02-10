@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccountService } from '../account.service';
 import { RollDiceService } from './roll-dice.service';
 
 @Component({
@@ -10,7 +11,8 @@ import { RollDiceService } from './roll-dice.service';
 export class RollDiceComponent implements OnInit {
 
   constructor(
-    private rollDiceService: RollDiceService
+    private rollDiceService: RollDiceService,
+    private accountService: AccountService
   ) { }
 
   ngOnInit() {

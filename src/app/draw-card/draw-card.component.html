@@ -1,26 +1,19 @@
 <div id="main" class="col-sm-8 col-sm-offset-2">
   <div class="col-sm-6">
-    <div *ngIf="!accountService.isAuthenticated" class="center">
-      <md-card class="no-style">
-        <md-card-subtitle> Player Name Here </md-card-subtitle>    
-        <img md-card-avatar src='https://firebasestorage.googleapis.com/v0/b/chuck-games.appspot.com/o/duck.jpg?alt=media&token=fbb508e7-0b09-45e2-abe1-fe9466e9fef8'>    
-        <span class="playingCard {{ drawCardService.pCard }}"></span>
-      </md-card>
-    </div>
     <div *ngIf="accountService.isAuthenticated" class="center">
       <md-card class="no-style">
-        <md-card-subtitle> {{ accountService.displayName }} </md-card-subtitle>    
-        <img md-card-avatar [src]='accountService.photoUrl'>    
         <span class="playingCard {{ drawCardService.pCard }}"></span>
+        <img md-card-avatar [src]='accountService.photoUrl'>    
+        <md-card-subtitle> {{ accountService.displayName }} </md-card-subtitle>    
       </md-card>
     </div>
   </div>
   <div class="col-sm-6">
     <div class="center">
       <md-card class="no-style">
-        <md-card-subtitle> Chuck Norris </md-card-subtitle>    
-        <img md-card-avatar src='https://firebasestorage.googleapis.com/v0/b/chuck-games.appspot.com/o/Chuck-Norris.jpg?alt=media&token=1ac5db4f-212e-45e7-9162-a740e142afe4'>    
         <span class="playingCard {{ drawCardService.cCard }}"></span>
+        <img md-card-avatar src='https://firebasestorage.googleapis.com/v0/b/chuck-games.appspot.com/o/Chuck-Norris.jpg?alt=media&token=1ac5db4f-212e-45e7-9162-a740e142afe4'>    
+        <md-card-subtitle> Chuck Norris </md-card-subtitle>    
       </md-card>
     </div>
   </div>

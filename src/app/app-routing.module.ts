@@ -11,7 +11,7 @@ const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
     { path: 'draw', component: DrawCardComponent, canActivate: [ LoggedInGuard ]  },
-    { path: 'dice', component: RollDiceComponent }
+    { path: 'dice', component: RollDiceComponent, canActivate: [ LoggedInGuard ]  }
 ];
 
 export const appRoutingProviders: any[] = [
