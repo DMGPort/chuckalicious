@@ -11,6 +11,7 @@ import { FirebaseConfig, FirebaseAuthGoogleConfig } from './firebase-config';
 import { AppRoutingModule, appRoutingProviders } from './app-routing.module';
 import { AccountService } from './account.service';
 import { DialogService } from './dialog.service';
+import { UniversalService } from './universal.service';
 
 import { LoginComponent } from './login/login.component';
 import { LoginRequestComponent } from './login-request/login-request.component';
@@ -22,6 +23,7 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import { GameGridComponent } from './game-grid/game-grid.component';
 import { DrawCardComponent } from './draw-card/draw-card.component';
 import { RollDiceComponent } from './roll-dice/roll-dice.component';
+import { GameTabsComponent } from './game-tabs/game-tabs.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { RollDiceComponent } from './roll-dice/roll-dice.component';
     DynoDialogComponent,
     GameGridComponent,
     DrawCardComponent,
-    RollDiceComponent
+    RollDiceComponent,
+    GameTabsComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,7 @@ import { RollDiceComponent } from './roll-dice/roll-dice.component';
     AngularFireModule.initializeApp(FirebaseConfig, FirebaseAuthGoogleConfig),
     AppRoutingModule
   ],
-  providers: [ appRoutingProviders, AccountService, DialogService ],
+  providers: [ appRoutingProviders, AccountService, UniversalService, DialogService ],
   bootstrap: [ AppComponent ],
   entryComponents: [
     LoginComponent,

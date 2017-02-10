@@ -1,12 +1,23 @@
-#main{
-  margin-top: 50px;
+.fam {
+    text-align: center;
+}
+.mother {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-end; 
+    height: auto;
+}
+.child {
+    margin: 0 0;
+    overflow: hidden;
+    align-self: flex-start;
 }
 .playingCard {
   display: block;
   position: relative;
   border-radius: .3em;
   text-align: center;
-  margin: 20px;
   height: 116px;
   width: 83px;
   margin-left: auto;

@@ -4,14 +4,12 @@ import { CommonModule } from '@angular/common';
 import { LoggedInGuard } from './login.guard';
 
 import { HomeComponent } from './home/home.component';
-import { DrawCardComponent } from './draw-card/draw-card.component';
-import { RollDiceComponent } from './roll-dice/roll-dice.component';
+import { GameTabsComponent } from './game-tabs/game-tabs.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
-    { path: 'draw', component: DrawCardComponent, canActivate: [ LoggedInGuard ]  },
-    { path: 'dice', component: RollDiceComponent, canActivate: [ LoggedInGuard ]  }
+    { path: 'games', component: GameTabsComponent, canActivate: [ LoggedInGuard ]  }
 ];
 
 export const appRoutingProviders: any[] = [
