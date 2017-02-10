@@ -1,0 +1,41 @@
+
+.cube {
+  display: block;
+  position: relative;
+  border-radius: .3em;
+  text-align: center;
+  margin-top: 20px;
+  height: 100px;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dice {
+  background: url('https://firebasestorage.googleapis.com/v0/b/chuck-games.appspot.com/o/Untitled.png?alt=media&token=ff3c7f87-9028-4a8d-9e10-55915def1db7') no-repeat;
+  background-position-y: -5px;  
+}
+.two {
+  background-position-x: -100px;
+}
+.three {
+  background-position-x: -200px;
+}
+.four {
+  background-position-x: -300px;
+}
+.five {
+  background-position-x: -400px;
+}
+.six {
+  background-position-x: -500px;
+}
+.seven {
+  background-position-x: -600px;
+}
+.five {
+  background-position-x: -700px;
+}
+.nine {
+  background-position-x: -800px;
+}
