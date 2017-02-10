@@ -1,2 +1,4 @@
-<span class="cube dice"></span>
-<span class="cube dice seven"></span>
+<span class="cube dice {{ rollDiceService.pDice}}"></span>
+<span class="cube dice {{ rollDiceService.cDice}}"></span>
+<span class="cube dice {{ rollDiceService.tDice}}"></span>
+<button md-raised-button (click)="rollDice()">Roll</button>
