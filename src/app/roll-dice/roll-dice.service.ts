@@ -9,26 +9,36 @@ export class RollDiceService {
   pNumber: number;
   cDice: string;
   cNumber: number;
-  
-  tDice: string;
 
   rollDice(){
-    this.pNumber = this.getRandomNumber(1,6);
+    this.scrambleDice(6)
+  }
+
+  roll(){
+    console.log("roll")      
+    this.pNumber = this.getRandomNumber(1,5);
+    this.cNumber = this.getRandomNumber(2,6);
+    if(this.pNumber >= this.cNumber){
+      while(this.pNumber >= this.cNumber){
+        this.cNumber = this.getRandomNumber(2,6);
+      }
+    }
     this.pDice = this.checkRoll(this.pNumber);
-    this.cNumber = this.getRandomNumber(2,8);
     this.cDice = this.checkRoll(this.cNumber);
-    this.scrambleDice(4)
   }
 
   scrambleDice(int: number){
-      console.log(int)
+      this.pDice = this.checkRoll(this.getRandomNumber(1,6));
+      this.cDice = this.checkRoll(this.getRandomNumber(1,6));
       int--;           
       if (int > 0) {  
         setTimeout(() =>{
-           this.scrambleDice(int);  
-        }  , 300)              //  ..  setTimeout()
-   
-}
+           this.scrambleDice(int);
+        }  , 150) 
+      }
+      if (int == 0) {  
+          this.roll();
+      }
   }
 
   getRandomNumber(min, max){
@@ -53,15 +63,6 @@ export class RollDiceService {
       }
       if(number == 6){
         return " six";
-      }
-      if(number == 7){
-        return " seven";
-      }
-      if(number == 8){
-        return " eight";
-      }
-      if(number == 9){
-        return " nine";
       }
   }
 }
