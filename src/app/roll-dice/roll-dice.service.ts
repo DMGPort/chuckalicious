@@ -14,8 +14,7 @@ export class RollDiceService {
     this.scrambleDice(6)
   }
 
-  roll(){
-    console.log("roll")      
+  roll(){   
     this.pNumber = this.getRandomNumber(1,5);
     this.cNumber = this.getRandomNumber(2,6);
     if(this.pNumber >= this.cNumber){
