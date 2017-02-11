@@ -25,7 +25,8 @@ export class AccountService {
   itemSubscription;
   private storeAuthInfo(authState: FirebaseAuthState): FirebaseAuthState {
     if (authState) {
-      this.displayName = authState.auth.displayName;
+      let name = authState.auth.displayName;
+      this.displayName = name.substr(0,name.indexOf(' '));
       this.photoUrl = authState.auth.photoURL;
       this.isAuthenticated = true;
       if (authState.google) {

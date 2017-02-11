@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UniversalService } from '../universal.service';
 
 @Component({
   selector: 'app-game-grid',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameGridComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private universalService: UniversalService
+  ) { }
 
   ngOnInit() {
   }
+
+  setDraw(){
+    this.universalService.gameIndex = '0';
+  }
+  
+  setDice(){
+    this.universalService.gameIndex = '1';    
+  }
+
 
 }
